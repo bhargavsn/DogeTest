@@ -1,4 +1,6 @@
 # DogeTest
+
+## Summary
 Trying out simple examples for
 1. **Mining** Crypto
 2. API to **buy/sell** Crypto
