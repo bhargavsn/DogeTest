@@ -165,6 +165,6 @@ def my_first_miner():
         print('Block #{} was added. It took {} steps to find it.'.format(i, block_added.nounce))
     print('Difficulty was increased for the last block!')
 
-
+# Program Entry point 
 if __name__ == '__main__':
     my_first_miner()
