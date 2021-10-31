@@ -4,6 +4,7 @@
 # 2. Block of Transactions
 # 3. Block Chain of Blocks
 # @Author: BhargavSN
+# @Location: London
 ###############################
 import hashlib
 from time import sleep
