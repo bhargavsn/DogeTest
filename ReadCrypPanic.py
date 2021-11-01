@@ -37,7 +37,7 @@ class CryptoNews:
 
 def get_crypto_data():
     url = "https://cryptopanic.com/api/posts/?auth_token"
-    auth_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx" # Replace with your correct token
+    auth_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"  # Replace with your correct token
     crypto_obj = CryptoNews(url, auth_token)
     data = crypto_obj.load_data()
     return data
