@@ -1,13 +1,14 @@
-###############################
-# Sample Script to demonstrate the tasks involved in Mining
-# 1. Transaction
-# 2. Block of Transactions
-# 3. Block Chain of Blocks
-# @Author: BhargavSN
-# @Location: London
-###############################
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# ----------------------------------------------------------------------------
+# Created By  : Bhargav
+# ---------------------------------------------------------------------------
+""" Demo of Hashing, creating a transaction and adding it to Blockchain """
+
 import hashlib
 from time import sleep
+from random import seed
+from random import randint
 
 
 # Hash Function
@@ -20,13 +21,13 @@ def hash_256(string):
 ###############################
 class TransactionGenerator:
     def __init__(self):
-        self.random_seed = 0
+        self.random_seed = 1
 
     def generate_transaction(self):
+        seed(self.random_seed)
         transaction_payload = 'This is a transaction between A and B. ' \
-                              'We add a random seed here {} to make its hash unique'.format(self.random_seed)
+                              'We add a random seed here {} to make its hash unique'.format(randint(0, 10000000))
         transaction_hash = hash_256(transaction_payload)
-        self.random_seed += 1
         return transaction_hash
 
 
@@ -166,6 +167,7 @@ def my_first_miner():
         print('Block #{} was added. It took {} steps to find it.'.format(i, block_added.nounce))
     print('Difficulty was increased for the last block!')
 
-# Program Entry point 
+
+# Program Entry point
 if __name__ == '__main__':
     my_first_miner()
